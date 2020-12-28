@@ -40,12 +40,14 @@ export default {
   }
 }
 </script>
+<style lang="sass">
+    @import '../node_modules/typeface-roboto/index.css'
+</style>
 <style  lang="scss">
     @import 'node_modules/bootstrap/scss/bootstrap.scss';
     @import 'node_modules/bootstrap-vue/src/index.scss';
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
     body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
     html, body{
         overflow-y:hidden;

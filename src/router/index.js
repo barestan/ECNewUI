@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Errors from '@/views/Errors.vue'
 import About from '@/views/About.vue'
 import Detail from "@/views/Detail";
+import List from "@/views/List";
 
 
 Vue.use(VueRouter)
@@ -11,7 +11,7 @@ const routes = [
     {
         path: '/',
         name: 'Root',
-        redirect: (window.$elmah_root || '/elmah') +"/errors"
+        redirect: '/errors'
     },
     {
         path: window.$elmah_root || '/elmah',
@@ -21,7 +21,7 @@ const routes = [
     {
         path: (window.$elmah_root || '/elmah')+ '/errors',
         name: 'Errors',
-        component: Errors,
+        component: List,
     },
     {
         path: (window.$elmah_root || '/elmah') + '/about',

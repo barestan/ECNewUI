@@ -1,12 +1,12 @@
 <template>
     <div>
-        <ErrorsTableItem :item="item" :id="id" mode="details"></ErrorsTableItem>
+        <ErrorDetail :item="item" :id="id"></ErrorDetail>
     </div>
 </template>
 
 <script>
-    import ErrorsTableItem from "@/components/ErrorsTableItem";
     import axios from "axios";
+    import ErrorDetail from "@/components/ErrorDetail";
     export default {
         name: "Detail",
         props: ['id'],
@@ -15,7 +15,7 @@
                 item: {}
             }
         },
-        components: {ErrorsTableItem},
+        components: {ErrorDetail},
         mounted() {
             axios.get( (window.$elmah_root || '/elmah') +'/api/error?id='+ this.id)
                 .then(response => {
